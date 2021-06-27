@@ -1,0 +1,187 @@
+<!doctype html>
+<html><!-- InstanceBegin template="/Templates/plantilla.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Parque Natural – Reservas</title>
+<!-- InstanceEndEditable -->
+<link href="estilo.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <h1><strong>Parque Natural <span class="marron">Sierra Bicuerca</span></strong></h1>
+  </header>
+  <div class="sidebar1">
+    <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="especies.html">Especies</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+    </ul>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+  <div class="content-content">
+    <section>
+      <h2><!-- InstanceBeginEditable name="Titulo" -->Reservas<!-- InstanceEndEditable --></h2>
+      <!-- InstanceBeginEditable name="Contenido" -->
+      <p>La inscripcion al Centro de Eduacion Alternativa es libre y gratuito, siempre que se respeten las normas de  conducta y las normas del centro educativo. </p>
+      <p> No  obstante, Confirme su Incripcion en el Cento de Eduacion Alternativa, Llevando los requisistos indispensables para cada nivel y especialidad 
+      
+      <a href="mapa.html">(Ubicacion)</a>
+
+      
+    </p>
+      <h3>Horario y reservas</h3>
+      <table width="420" border="0" cellpadding="3" cellspacing="3" class="reservas">
+        <tbody>
+          <tr>
+            <th colspan="5" scope="col"><p><strong>EDUACION SECUNDARIA DE ADULTOS:</strong></p></th>
+            </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td colspan="2" class="titulo">Temporada de Verano</td>
+            <td colspan="2" class="titulo">Temporada de Invierno</td>
+            </tr>
+          <tr>
+            <td class="titulo">Horarios:</td>
+            <td colspan="2"><p>10:00 – 13:00</p>
+              <p>16:00  – 19:00</p></td>
+            <td colspan="2"><p>11:00 – 14:00</p></td>
+            </tr>
+          <tr>
+            <td rowspan="2" class="titulo">Tarifas:</td>
+            <td>Individual:</td>
+            <td>Grupos:</td>
+            <td>Individual:</td>
+            <td>Grupos:</td>
+          </tr>
+          <tr>
+            <td>5 &#8364; Persona</td>
+            <td>3 &#8364; Persona</td>
+            <td>4 € Persona</td>
+            <td>2 € Persona</td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="420" border="0" cellpadding="3" cellspacing="3" class="reservas">
+        <tbody>
+          <tr>
+            <th colspan="3" scope="col">EDUACION TECNICA DE ADULTOS </th>
+            </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td class="titulo">Temporada  de Verano</td>
+            <td class="titulo">Temporada  de Invierno</td>
+          </tr>
+          <tr>
+            <td class="titulo">Horarios:</td>
+            <td><p>9:00  – 10:00</p>
+              <p>15:00  - 16:00</p></td>
+            <td>10:00 – 11:00</td>
+          </tr>
+          <tr>
+            <td class="titulo">Tarifas:</td>
+            <td>25 &#8364;</td>
+            <td>25 &#8364;</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><strong>Contacto</strong></h3>
+      <p>        Si  estás pensando reservar un cupo, por favor, rellena este  formulario:</p>
+      <form action="enviar_reserva.php" method="post" name="form1" id="form1">
+        <table width="100%" border="0" cellspacing="2" cellpadding="4">
+          <tbody>
+            <tr>
+              <td><label for="Nombre">Nombres y Apellidos:</label></td>
+              <td><input name="Nombre" type="text" class="texto" id="Nombre" autocomplete="off" size="25"></td>
+            </tr>
+            <tr>
+              <td><label for="Email">Correo Electronico:</label></td>
+              <td><input name="Email" type="email" class="texto" id="Email"></td>
+            </tr>
+            <tr>
+              <td><label for="Fecha">Dia de la Visita:</label></td>
+              <td><input name="Fecha" type="date" class="texto" id="Fecha">
+                (DD/MM/AA) </td>
+            </tr>
+            <tr>
+              <td><label for="Numero">Edad:</label></td>
+              <td><input name="Numero" type="number" class="texto" id="Numero" max="100" min="0" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td>Etapa/Especialidad:</td>
+              <td><input type="radio" name="Edad" id="radio" value="5 a 8">
+                <label for="Edad">Educaion Secundaria de Adultos<br>
+                  <input type="radio" name="Edad" id="radio2" value="9 a 14">
+                  Sistemas Computacionales<br>
+                <input type="radio" name="Edad" id="radio3" value="15 a 18">
+                Gastronomia Alimentacion<br>
+                <input type="radio" name="Edad" id="radio4" value="Adultos">
+                Mecanica Automotris<br>
+                <input type="radio" name="Edad" id="radio5" value="Adultos"> 
+                Belleza Integral<br>
+                </label></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="checkbox" name="Aula" id="Aula">
+                 Confirme su Inscipsion en el Centro Educativo</td>
+              </tr>
+            <tr>
+              <td>Observaciones:</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center"><textarea name="Observaciones" cols="50" rows="5" class="texto" id="Observaciones">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</textarea></td>
+              </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td align="right"><input name="submit" type="submit" class="boton" id="submit" value="Enviar"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <p>&nbsp; </p>
+      <!-- InstanceEndEditable --></section>
+  </div>
+  <!-- end .content --></article>
+  <footer>
+    <p>Desarrollado por: Dante Lucas Licidio</p>
+  </footer>
+<!-- end .container --></div>
+</body>
+<!-- InstanceEnd --></html>

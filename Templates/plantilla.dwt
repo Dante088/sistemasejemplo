@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Documento sin título</title>
+<!-- TemplateEndEditable -->
+<link href="../estilo.css" rel="stylesheet" type="text/css"><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+
+<div class="container">
+  <header>
+    <h1><strong>Parque Natural <span class="marron">Sierra Bicuerca</span></strong></h1>
+  </header>
+  <div class="sidebar1">
+    <ul class="nav">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../especies.html">Especies</a></li>
+        <li><a href="../reservas.html">Reservas</a></li>
+        <li><a href="../galeria.html">Galeria</a></li>
+    </ul>
+  <!-- end .sidebar1 --></div>
+  <article class="content">
+  <div class="content-content">
+    <section>
+      <h2><!-- TemplateBeginEditable name="Titulo" -->Título<!-- TemplateEndEditable --></h2>
+      <!-- TemplateBeginEditable name="Contenido" -->
+      <p>Contenido </p>
+      <!-- TemplateEndEditable --></section>
+  </div>
+  <!-- end .content --></article>
+  <footer>
+    <p>Desarrollado por: Dante Lucas Licidio</p>
+  </footer>
+<!-- end .container --></div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+@charset "utf-8";
+body {
+	line-height: 1.4;
+	font-size: 14px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	background-color: #DFDFDF;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	text-align: justify;
+}
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0; /* la adición de relleno a los lados del elemento dentro de los bloques, en lugar de en los elementos del bloque propiamente dicho, elimina todas las matemáticas de modelo de cuadro. Un bloque anidado con relleno lateral también puede usarse como método alternativo. */
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+}
+/* ~~ Este contenedor de anchura fija rodea a todas las demás bloques ~~ */
+.container {
+	width: 800px;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px; /* el valor automático de los lados, unido a la anchura, centra el diseño  */
+	border: 1px solid #D3D3D3;
+	border-radius: 12px;
+}
+/* ~~ No se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. ~~ */
+header {
+	margin-bottom: 20px;
+
+}
+header h1 {
+	color: #5F8F11;
+	letter-spacing: 0.2em;
+	text-align: center;
+	background-image: url(Imagen/portada.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding-top: 160px;
+}
+
+
+
+/* ~~ Estas son las columnas para el diseño. ~~ 
+
+1) El relleno sólo se sitúa en la parte superior y/o inferior de los elementos del bloque. Los elementos situados dentro de estos bloques tienen relleno a los lados. Esto le ahorra las "matemáticas de modelo de cuadro". Recuerde que si añade relleno o borde lateral al bloque propiamente dicho, éste se añadirá a la anchura que defina para crear la anchura *total*. También puede optar por eliminar el relleno del elemento en el  bloque y colocar un segundo bloque dentro de éste sin anchura y el relleno necesario para el diseño deseado.
+
+2) No se asigna margen a las columnas, ya que todas ellas son flotantes. Si es preciso añadir un margen, evite colocarlo en el lado hacia el que se produce la flotación (por ejemplo: un margen derecho en un bloque configurado para flotar hacia la derecha). En muchas ocasiones, puede usarse relleno como alternativa. En el caso de bloques para los que deba incumplirse esta regla, deberá añadir una declaración "display:inline" a la regla del elemento del bloque para evitar un error que provoca que algunas versiones de Internet Explorer dupliquen el margen.
+
+3) Dado que las clases se pueden usar varias veces en un documento (y que también se pueden aplicar varias clases a un elemento), se ha asignado a las columnas nombres de clases en lugar de ID. Por ejemplo, dos bloques de barra lateral podrían apilarse si fuera necesario. Si lo prefiere, éstas pueden cambiarse a ID fácilmente, siempre y cuando las utilice una sola vez por documento.
+
+4) Si prefiere que la navegación esté a la izquierda en lugar de a la derecha, simplemente haga que estas columnas floten en dirección opuesta (todas a la izquierda en lugar de todas a la derecha) y éstas se representarán en orden inverso. No es necesario mover los bloques por el código fuente HTML.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 140px;
+}
+.content {
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 10px;
+	width: 640px;
+	float: left;
+	background-image: url(Imagen/Contenido.png);
+	background-position: 0% top;
+	background-repeat: repeat-x;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+}
+
+/* ~~ Los estilos de lista de navegación (pueden eliminarse si opta por usar un menú desplegable predefinido como el de Spry) ~~ */
+ul.nav {
+	list-style: none; /* esto crea el espacio entre la navegación en el contenido situado debajo */
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+ul.nav li {
+	border: 1px solid #D3D3D3; /* esto crea la separación de los botones  */
+	font-size: 90%;
+	background-color: #FFFFFF;
+	margin-bottom: 5px;
+}
+ul.nav a, ul.nav a:visited { /* al agrupar estos selectores, se asegurará de que los vínculos mantengan el aspecto de botón incluso después de haber sido visitados  */
+	display: block;  /*esta anchura hace que se pueda hacer clic en todo el botón para IE6. Puede eliminarse si no es necesario proporcionar compatibilidad con IE6. Calcule la anchura adecuada restando el relleno de este vínculo de la anchura del contenedor de barra lateral. */
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #4F4F4F;
+	background-position: 0% bottom;
+	background-repeat: repeat-x;
+	background-image: url(Imagen/Boton.png);
+}
+
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* esto cambia el color de fondo y del texto tanto para usuarios que naveguen con ratón como para los que lo hagan con teclado */
+	color: #000;
+
+
+}
+.nav li:hover {
+	background-color: #E5CD82;
+	border-color: #9F9F9F;
+}
+
+
+
+
+
+
+
+
+/* ~~ El pie de página ~~ */
+footer {
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	position: relative;/* esto da a IE6 el parámetro hasLayout para borrar correctamente */
+	clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
+	color: #BFBFBF;
+	text-align: center;
+	font-style: oblique;
+	font-size: 85%;
+}
+
+/*Compatibilidad con HTML5: define nuevas etiquetas HTML5 como display:block para que los navegadores sepan cómo procesar las etiquetas correctamente. */
+header, section, footer, aside, article, figure {
+	display: block;
+}
+.marron {
+	color: #BF823B;
+
+}
+.content-content {
+	background-image: url(Imagen/Contenido1.png);
+	background-position: 0% bottom;
+	background-repeat: repeat-x;
+	border: 1px solid #D3D3D3;
+	padding-top: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+}
+h2 {
+	color: #70AF0A;
+	border-bottom: 1px solid #CFDFB5;
+}
+h3 {
+	color: #BF823B;
+	margin-top: 25px;
+}
+footer p {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+
+
+}
+#foto_especie {
+	background-color: #BF823B;
+	float: right;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	margin-top: 40px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	border: 2px solid #70AF0A;
+}
+.reservas {
+	font-size: 90%;
+	text-align: center;
+	background-color: #EFD3b3;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	border: 1px solid #BF823B;
+}
+
+.reservas th {
+color: #5F8F11;
+background-color: #EFD3B3;
+}
+.reservas td {
+background-color: #EFFFEF;
+}
+
+table.reservas td.titulo {
+background-color:#D6EFC2;
+}
+form {
+width:410px; 
+border:#BF823B 1px solid; 
+margin:auto;
+ }
+form table { 
+width:410px; 
+font-size:90%;
+border:#EFD3B3 3px solid;
+background-color:#EFFFEF;
+ }
+.texto{
+border-width:1px;
+border-style:solid;
+border-color:#BF823B #EFD3B3 #EFD3B3 #BF823B;
+}
+.boton {
+border-width:1px;
+border-style:solid;
+border-color:#EFD3B3 #BF823B #BF823B #EFD3B3;
+}
